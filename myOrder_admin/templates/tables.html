@@ -1,0 +1,12 @@
+<ion-header-bar class="bar-positive">
+  <h2 class="title">Tafels</h2>
+</ion-header-bar>
+
+<ion-content>
+  <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <ion-list class="list list-inset" ng-repeat="(key, table) in tables">
+      <ion-item href="#/tab/tables/{{table.name}}">
+        <h2>{{table.name}}</h2>
+      </ion-item>
+    </ion-list>
+</ion-content>

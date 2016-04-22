@@ -1,0 +1,30 @@
+<ion-view hide-nav-bar="true">
+	<ion-content class="padding">
+		<ion-list class="list-inset">
+			<ion-item class="item-text-wrap tables_list" ng-repeat="table in tables | filter: { name: whichtable }">
+				<div class="table_img">
+					<img src="img/logo_myOrder.png" alt="Logo"/>
+				</div>
+	
+		        <h2 class="user_name">{{whichtable}}</h2>
+		        <h2 ng-repeat="(key, user) in tables" class="user_name">{{user.email}}</h2>
+
+
+		        <div class="list card" ng-repeat="(key, order) in table.orders">
+
+		  <a class="item item-icon-left">
+		    <i class="icon ion-ios-wineglass"></i>
+		    {{ order.name }} - {{ order.quantity }} stuk(s) a {{ order.price }} euro
+		  </a> 	
+		</div>
+
+		      
+			</ion-item>
+		</ion-list class="list-inset"> 
+
+		
+	<a class="button icon icon-right ion-chevron-right" href="#/tab/products">Voeg een product toe aan bestelling</a>
+
+	</ion-content>
+
+</ion-view>
